@@ -54,6 +54,7 @@
             </li>  
             <li>
                 <a data-content="wnętrza" href="#">
+                    <img class="project5" src="projects/W-01-6m.jpg">
                     <p>Renowacja mieszkania Beaty</p>
                 </a>
             </li>
@@ -64,6 +65,7 @@
             </li>
         </ul>
     </main>
+    <aside id="image-container"></aside>
     <nav id="menu-mobile">
         <a href="menu.html">Menu</a>
     </nav>
@@ -73,5 +75,23 @@
             <li><a href="info.html">Informacje</a></li>
         </ul>
     </nav>
+    <script>
+        // Znajdujemy listę projektów
+        const projectList = document.querySelector('.gallery-container');
+        // Znajdujemy kontener na obrazy po prawej stronie
+        const imageContainer = document.getElementById('image-container');
+    
+        // Dodajemy obsługę zdarzenia dla każdego elementu listy
+        projectList.querySelectorAll('li').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                // Usuwamy obecny obrazek
+                imageContainer.innerHTML = '';
+                // Pobieramy obrazek z danego elementu listy
+                const image = item.querySelector('img').cloneNode(true);
+                // Dodajemy go do kontenera po prawej stronie
+                imageContainer.appendChild(image);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -17,8 +17,15 @@
     <main>
         <h2>realizująca pragmatyczne projekty wnętrz, architektury i urbanistyki.</h2>
     </main>
-    <figure>
-        <img src="projects/W-02-1m.jpg" alt="">
+    <figure id="random-image">
+        <!-- <img src="projects/W-01-1m.jpg" alt=""> -->
+        <!-- <img src="projects/W-01-2m.jpg" alt=""> -->
+        
+        <!-- <img src="projects/W-02-1m.jpg" alt=""> -->
+        <!-- <img src="projects/W-02-3m.jpg" alt=""> -->
+        
+        <!-- <img src="projects/A-01-1m.jpg" alt=""> -->
+        <!-- <img src="projects/A-03-1m.jpg" alt=""> -->
     </figure>
     <nav id="menu-mobile">
         <a href="menu.html">Menu</a>
@@ -36,5 +43,31 @@
             <li><a href="https://www.instagram.com/kubi_kry/">instagram</a></li>
         </ul>
     </footer>
+    <script>
+        window.onload = function() {
+            var images = [
+                "projects/W-01-1m.jpg",
+                "projects/W-01-2m.jpg",
+                "projects/W-01-4am.jpg",
+                "projects/W-01-5m.jpg",
+                "projects/W-01-6m.jpg",
+                "projects/W-02-1m.jpg",
+                "projects/W-02-3m.jpg",
+                "projects/A-01-1m.jpg",
+                "projects/A-02-1o.jpg"
+            ];
+
+            var randomIndex = Math.floor(Math.random() * images.length);
+            var randomImage = images[randomIndex];
+
+            var figure = document.getElementById('random-image');
+            figure.innerHTML = ''; // Wyczyszczenie elementu figure
+
+            var imgElement = document.createElement('img');
+            imgElement.src = randomImage;
+            imgElement.alt = '';
+            figure.appendChild(imgElement);
+        };
+    </script>
 </body>
 </html>
