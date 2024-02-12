@@ -23,3 +23,45 @@ nav {
     position: fixed;
     bottom: var(--margin);
 } 
+
+/* MEDIA DLA PROPORCJI POZIOMYCH */
+@media (min-width: 700px) {
+    html {
+        height: calc(100% - 2 * var(--margin));
+    }
+
+    body {
+        height: 100%;
+    }
+
+    main {
+        grid-row: 2 / -1;
+        align-self: end;
+    }
+
+    li ::before {
+        content: attr(data-content);
+        position: absolute;
+        left: 0;
+    }
+
+    main > ul > li {
+        margin-top: calc(0.2 * var(--margin));
+        /* line-height: calc(0.5 * var(--margin)); */
+        padding-left: calc((100vw - (1 * var(--margin))) / 6);
+        position: relative;
+    }
+    
+    nav {
+        position: unset;
+        bottom: unset;
+    }
+
+    li p {
+        display: unset;
+    }
+
+    li img {
+        display: none;
+    }
+}

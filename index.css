@@ -1,0 +1,19 @@
+main {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+/* MEDIA DLA PROPORCJI POZIOMYCH */
+@media (min-width: 700px) {
+    main {
+        display: unset;
+    }
+    
+    footer {
+        display: unset;
+        align-self: end;
+    }
+}

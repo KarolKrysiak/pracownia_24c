@@ -2,35 +2,98 @@ html, body {
     height: auto;
 }
 
-main p {
+p {
     height: 50vh;
     display: flex;
     align-items: center;
 }
 
-main p:nth-child(1) {
+p:nth-of-type(1) {
     align-items: end;
-    padding-bottom: calc(2 * var(--gap-size));
+}
+
+.credits {
+    margin-bottom: var(--gap-size);
 }
 
 footer {
     display: grid;
     margin-bottom: calc(1 * var(--gap-size));
-}
-
-footer ul {
     height: 50vh;
-}
-
-footer ul:nth-child(1) {
     margin-left: 20%;
-}
-
-footer ul:nth-of-type(2) {
-    height: fit-content;
 }
 
 nav {
     position: fixed;
     bottom: var(--margin);
+}
+
+/* MEDIA DLA PROPORCJI POZIOMYCH */
+@media (min-width: 700px) {
+    html {
+        height: calc(100% - 2 * var(--margin));
+    }
+
+    body {
+        height: 100%;
+        grid-template-rows: min-content min-content auto auto;
+
+    }
+
+    header, nav {
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        height: max-content;
+        /* align-items: start; */
+        /* margin: 0; */
+        /* padding: 0; */
+        /* background-color: aliceblue; */
+    }
+
+    p:nth-of-type(1) {
+        grid-column: 4 / -2;
+        grid-row: 2;
+        /* background-color: aliceblue; */
+        /* align-items: start; */
+        /* display: grid; */
+    }
+
+    p:nth-of-type(2) {
+        grid-column: 2 / 4;
+        grid-row: 4;
+        height: fit-content;
+        align-self: end;
+    }
+
+    p:nth-of-type(3) {
+        grid-column: 4 / -2;
+        grid-row: 3;
+        /* display: grid; */
+        /* align-items: start; */
+
+    }
+
+    .credits {
+        margin: 0;
+        grid-column: 5 / -1;
+        grid-row: 4;
+        /* height: auto; */
+        align-self: end;
+    }
+
+    footer {
+        margin: 0;
+        height: unset;
+        /* grid-column: 1; */
+        grid-row: 4;
+        align-items: end;
+    }
+
+    nav {
+        position: unset;
+    }
 }
