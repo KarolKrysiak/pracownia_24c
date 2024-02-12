@@ -1,0 +1,25 @@
+html, body {
+    height: auto;
+}
+
+header {
+    position: sticky;
+    top: var(--margin);
+}
+
+li img {
+    max-height: 70vw;
+    width: 70vw;
+    object-fit: contain;
+    object-position: left;
+    margin: calc(2 * var(--margin)) 0 calc(2 * var(--margin)) 0;
+}
+
+li p {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    bottom: var(--margin);
+} 

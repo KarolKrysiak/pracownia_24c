@@ -1,0 +1,18 @@
+html, body {
+    height: auto;
+}
+
+main img, h2, ul, main>p {
+    margin-bottom: var(--gap-size);
+    margin-top: var(--gap-size);
+}
+
+ul>li:last-child {
+    margin-bottom: calc(((-1) * var(--margin)));
+}
+
+nav {
+    position: fixed;
+    bottom: var(--margin);
+}
+

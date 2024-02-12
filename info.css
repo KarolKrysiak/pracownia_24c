@@ -1,0 +1,36 @@
+html, body {
+    height: auto;
+}
+
+main p {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+main p:nth-child(1) {
+    align-items: end;
+    padding-bottom: calc(2 * var(--gap-size));
+}
+
+footer {
+    display: grid;
+    margin-bottom: calc(1 * var(--gap-size));
+}
+
+footer ul {
+    height: 50vh;
+}
+
+footer ul:nth-child(1) {
+    margin-left: 20%;
+}
+
+footer ul:nth-of-type(2) {
+    height: fit-content;
+}
+
+nav {
+    position: fixed;
+    bottom: var(--margin);
+}
